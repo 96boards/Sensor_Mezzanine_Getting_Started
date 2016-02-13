@@ -15,8 +15,7 @@ void loop() {
 	if (pressed == 1) {
  		digitalWrite(ledPin, HIGH);
 		Serial.println("tweet");
-		delay(2000);
+		delay(1000);
 		digitalWrite(ledPin, LOW);
-		Serial.println("waiting");
 	}
 }
