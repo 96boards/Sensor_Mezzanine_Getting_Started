@@ -12,8 +12,8 @@ void sig_handler(int signo)
 }
 int main(int argc, char* argv[])
 {
-        mraa::Gpio* touch_gpio = new mraa::Gpio(492);
-        mraa::Gpio* relay_gpio = new mraa::Gpio(463);
+        mraa::Gpio* touch_gpio = new mraa::Gpio(29);
+        mraa::Gpio* relay_gpio = new mraa::Gpio(27);
         mraa::Result response;
         int touch;
 
