@@ -175,6 +175,8 @@ the I2C bus.
 
 <img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_RGB_Backlight_LCD.jpg?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_RGB_Backlight_LCD.jpg?raw=true" width="110" height="110" />
 
+[Back to top](#table-of-contents)
+
 ***
 
 # Introduction to the 96Boards Sensors Mezzanine
@@ -203,6 +205,8 @@ UART console.
 10. ATMEGA I2C Grove connector
 11. ATMEGA Arduino compatible socket
 12. ATMEGA Reset and Power LEDs
+
+[Back to top](#table-of-contents)
 
 ***
 
@@ -430,6 +434,8 @@ You can also use the “make monitor” command to connect the terminal to the s
 which will also release the ATMEGA from reset. The serial connection can be used as an IO
 channel between Linux and sketches running on the ATMEGA.
 
+[Back to top](#table-of-contents)
+
 ***
 
 # Example Project - Hello World with the RGB LCD
@@ -497,6 +503,8 @@ $ ./rgb_lcd_demo
 
 The LCD will show some sample messages and the backlight will cycle between red, blue
 and green.
+
+[Back to top](#table-of-contents)
 
 ***
 
@@ -580,6 +588,8 @@ $ sudo ./test_touch_relay # Must be run as root to access GPIOs
 When the program is run, the relay will switch between on and off each time you tap the
 touch sensor with your finger.
 
+[Back to top](#table-of-contents)
+
 ***
 
 # Example Project - Drive a Button and LED from the microcontroller
@@ -640,6 +650,8 @@ Build and execute the program
 
 `$ make upload reset_stty`
 
+[Back to top](#table-of-contents)
+
 ***
 
 # Example Project - Buzzer and Light Sensor
@@ -696,6 +708,8 @@ command line.
 $ ln -s /usr/share/arduino/Arduino.mk Makefile
 $ make upload reset_stty
 ```
+
+[Back to top](#table-of-contents)
 
 ***
 
@@ -807,6 +821,8 @@ To run the program, type in the terminal:
 `$ make run`
 
 And to exit, use Ctrl + C
+
+[Back to top](#table-of-contents)
 
 ***
 
@@ -936,6 +952,8 @@ Welcome to the tweeting doorbell! To quit, press CTRL + C
 
 And to exit, use CTRL + C
 
+[Back to top](#table-of-contents)
+
 ***
 
 # Additional Resources
@@ -986,3 +1004,7 @@ between the ATMEGA and the baseboard.
 You can download the GrovePi+ example software from github:
 
 http://github.com/Dexterlnd/GrovePi
+
+[Back to top](#table-of-contents)
+
+***
