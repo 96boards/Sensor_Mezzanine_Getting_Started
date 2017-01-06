@@ -51,30 +51,31 @@ Attribution-ShareAlike 4.0 International License.
 
 # Table of Contents
 
-- Included in this Kit
-- Introduction to the 96Boards Sensors Mezzanine
-- Setting up the Sensors Mezzanine
-   - Step 1: Install Debian Operating System
-   - Step 2: Attach Sensors Adapter
-   - Step 3: Get a command prompt
-   - Step 4: Connect to the Internet
-   - Step 5: Update Debian
-   - Step 6: Install extra tool packages
-   - Step 7: Configure the software
-- Using your Sensors Board
-   - Using Baseboard I2C
-   - Using Baseboard GPIO
-   - Using ATMEGA IO
-- Example Project - Hello World with the RGB LCD
-- Example Project - Touch Sensor and Relay
-- Example Project - Drive a Button and LED from the microcontroller
-- Example Project - Buzzer and Light Sensor
-- Example Project - Temperature and Humidity Display
-- Example Project - Tweeting Doorbell
-- Additional Resources
-   - Design files
-   - More Example Code
-   - Examples from Other Kits
+- [Included in this Kit](#included-in-this-kit)
+- [Introduction to the 96Boards Sensors Mezzanine](#introduction-to-the-96boards-sensors-mezzanine)
+- [Setting up the Sensors Mezzanine](#setting-up-the-sensors-mezzanine)
+   - [Step 1: Install Debian Operating System](#step-1-install-debian-operating-system)
+   - [Step 2: Attach Sensors Adapter](#step-2-attach-sensors-adapter)
+   - [Step 3: Get a command prompt](#step-3-get-a-command-prompt)
+   - [Step 4: Connect to the Internet](#step-4-connect-to-the-internet)
+   - [Step 5: Update Debian](#step-5-update-debian)
+   - [Step 6: Install extra tool packages](#step-6-install-extra-tool-packages)
+   - [Step 7: Configure the software](#step-7-configure-the-software)
+   - [Step 8: Fetch the sample code for projects in this guide](#step-8-fetch-the-sample-code-for-projects-in-this-guide)
+- [Using your Sensors Board](#using-your-sensors-board)
+   - [Using Baseboard I2C](#using-baseboard-i2c)
+   - [Using Baseboard GPIO](#using-baseboard-gpio)
+   - [Using ATMEGA IO](#using-atmega-io)
+- [Example Project - Hello World with the RGB LCD](#example-project---hello-world-with-the-rgb-lcd)
+- [Example Project - Touch Sensor and Relay](#example-project---touch-sensor-and-relay)
+- [Example Project - Drive a Button and LED from the microcontroller](#example-project---drive-a-button-and-led-from-the-microcontroller)
+- [Example Project - Buzzer and Light Sensor](#example-project---buzzer-and-light-sensor)
+- [Example Project - Temperature and Humidity Display](#example-project---temperature-and-humidity-display)
+- [Example Project - Tweeting Doorbell](#example-project---tweeting-doorbell)
+- [Additional Resources](#additional-resources)
+   - [Design files](#design-files)
+   - [More Example Code](#more-example-core)
+   - [Examples from Other Kits](#example-from-other-kits)
 
 ***
 
