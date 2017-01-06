@@ -84,7 +84,7 @@ Attribution-ShareAlike 4.0 International License.
 
 This is the adapter for connecting Grove modules to a 96Boards baseboard. It provides 18 Grove connectors, an Arduino compatible shield socket, and an ATMEGA328P microcontroller.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" />
 
 ## Grove Button Module (3.3V/5V)
 
@@ -92,21 +92,21 @@ This Grove module is a simple momentary on/off button. When pressed, it
 pulls the data line up to VCC to output a HIGH signal. When released, the
 data line drops down to output LOW.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Button_Module.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Button_Module.png?raw=true" />
 
 ## Grove Touch Sensor Module (3.3V/5V)
 
 A simple touch sensor that behaves in a similar fashion to the button.
 Outputs high when touching the sensor with finger, and low otherwise.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Touch_Sensor_Module.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Touch_Sensor_Module.png?raw=true" />
 
 ## Grove LED Socket Module (3.3V/5V)
 
 An LED in Grove module form. Plug your favourite colour of LED into the
 socket, and it will glow brightly when the signal line is driven HIGH.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_LED_Socket_Module.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_LED_Socket_Module.png?raw=true" />
 
 ## Grove Buzzer Module (5V only)
 
@@ -114,14 +114,14 @@ This module is a piezo buzzer that will emit a tone when the data line is
 driven HIGH, or can be made to play notes and effects by connecting it to a
 pulse-width modulation (PWM) output.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Buzzer_Module.jpg?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Buzzer_Module.jpg?raw=true" />
 
 ## Grove Rotary Angle Sensor Module (3.3V/5V)
 
 This Grove module outputs an analog signal between 0V and VCC based on
 the position of the potentiometer. It has an angular range of 300 degrees.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Rotary_Angle_Sensor_Module.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Rotary_Angle_Sensor_Module.png?raw=true" />
 
 ## Grove Sound Sensor (5V only)
 
@@ -129,14 +129,14 @@ This is a sound sensing module with a simple microphone. It can be used to
 detect the volume of sound in the area. The resistance of the sensor
 decreases as the level of sound increases.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Sound_Sensor.jpg?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Sound_Sensor.jpg?raw=true" />
 
 ## Grove Light Sensor (3.3V/5V)
 
 This module detects the intensity of light shining on the sensor. The
 resistance of the sensor decreases as the amount of illumination increases.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Light_Sensor.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Light_Sensor.png?raw=true" />
 
 ## Grove Servo (5V only)
 
@@ -144,7 +144,7 @@ The Grove servo is an actuator that is controlled by a PWM signal. The angle
 of the servo can be adjusted by changing the pulse width of the input PWM
 signal.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Servo.jpg?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Servo.jpg?raw=true" />
 
 ## Grove Relay (3.3V/5V)
 
@@ -156,15 +156,14 @@ will close.
 Use it to control lights and equipment at up to 250V at 10 amps,
 but be careful when working with mains voltages.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Relay.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Relay.png?raw=true" />
 
 ## Grove Temperature and Humidity Sensor (3.3V/5V)
 
 This Grove module is a high accuracy temperature and humidity
 sensor.
 
-< insert image here >
-
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Temerature_and_Humidity_Sensor.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Temerature_and_Humidity_Sensor.png?raw=true" />
 
 ## Grove RGB Backlight LCD (5V only)
 
@@ -173,7 +172,7 @@ This is a great little display module that is easy to control. It is a
 set it to whatever colour you like. This module is controlled using
 the I2C bus.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_RGB_Backlight_LCD.jpg?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_RGB_Backlight_LCD.jpg?raw=true" />
 
 ***
 
@@ -189,7 +188,7 @@ UART console.
 
 **Features**
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" />
 
 1. Low Speed Expansion connector
 2. USB UART console connector
@@ -442,7 +441,7 @@ using Python or Java.
 
 Connect the Groce RGB LCD to either of the I2C0 Grove connectors
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_RGB_LCD.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_RGB_LCD.png?raw=true" />
 
 ## Step 2: Write the Software
 
@@ -516,7 +515,7 @@ off.
 - Attach the relay to G2
 - Attach the touch sensor to G3
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Touch_Relay.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Touch_Relay.png?raw=true" />
 
 ## Step 2: Write the Code
 
@@ -593,7 +592,7 @@ Arduino toolchain to program the microcontroller.
 - Attach the Grove Button to connector A0.
 - Attach the Grove LED to connector D3. 
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Button_LED.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Button_LED.png?raw=true" />
 
 ## Step 2: Write the Code
 
@@ -634,7 +633,7 @@ Add the Arduino.mk Makefile to the same directory
 
 `$ ln -s /usr/share/arduino/Arduino.mk Makefile`
 
-#Step 3: Run the Demo
+## Step 3: Run the Demo
 
 Build and execute the program
 
@@ -658,7 +657,7 @@ prefered pins.
 - Attach the light sensor to A0
 - Attach the buzzer to D4
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Buzzer_Light.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Buzzer_Light.png?raw=true" />
 
 ## Step 2: Write the Code
 
@@ -687,7 +686,7 @@ void loop(){
 }
 ```
 
-## Run the Demo
+## Step 3: Run the Demo
 
 Add the Arduino.mk Makefile to the same directory and build and run the program from the
 command line.
@@ -714,7 +713,7 @@ and humidity readings on the LCD display.
 - Attach the RGB LCD to I2C0
 - Attach the temperature and humidity sensor to A0.
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Temperature_Humidity_LCD.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Temperature_Humidity_LCD.png?raw=true" />
 
 ## Step 2: Write the Code
 
@@ -828,7 +827,7 @@ the “Tweepy” package:
 - Connect the Buzzer module to D5
 - Connect the RGB LCD to I2C0
 
-< insert image here >
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Tweeting_Doorbell.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Example_Tweeting_Doorbell.png?raw=true" />
 
 ## Step 2: Write the Code
 
