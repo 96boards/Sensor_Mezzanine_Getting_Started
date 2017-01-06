@@ -84,7 +84,7 @@ Attribution-ShareAlike 4.0 International License.
 
 This is the adapter for connecting Grove modules to a 96Boards baseboard. It provides 18 Grove connectors, an Arduino compatible shield socket, and an ATMEGA328P microcontroller.
 
-<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" width="250" height="160" />
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/96Boards_Sensor_Mezzanine.png?raw=true" width="330" height="215" />
 
 ## Grove Button Module (3.3V/5V)
 
@@ -188,7 +188,7 @@ UART console.
 
 **Features**
 
-<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" width="250" height="160" />
+<img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" data-canonical-src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Grove_Mezzanine_Features.png?raw=true" width="330" height="250" />
 
 1. Low Speed Expansion connector
 2. USB UART console connector
