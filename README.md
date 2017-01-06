@@ -8,6 +8,8 @@ product over the lifetime of the platform.
 
 http://www.96boards.org
 
+***
+
 # About Grove
 
 Grove is a system for wiring up sensor and control modules using standardized connectors
@@ -17,6 +19,8 @@ function, such as sensing temperature or driving an LCD.
 
 http://www.seeed.cc/grove
 
+***
+
 # About the 96Boards Sensors Mezzanine Adapter
 
 The 96Boards Sensors Mezzanine is an add-on board for any 96Boards compliant baseboard
@@ -25,6 +29,8 @@ including the HiKey from either CircuitCo or LeMaker, and the Qualcomm Dragonboa
 modules plus an on-board Arduino compatible microcontroller and shield connector.
 
 https://www.96boards.org/products/mezzanine/sensors-mezzanine/
+
+***
 
 # About Linaro
 
@@ -69,6 +75,8 @@ Attribution-ShareAlike 4.0 International License.
    - Design files
    - More Example Code
    - Examples from Other Kits
+
+***
 
 # Included in this Kit
 
@@ -167,6 +175,8 @@ the I2C bus.
 
 < insert image here >
 
+***
+
 # Introduction to the 96Boards Sensors Mezzanine
 
 The 96Boards Sensors Mezzanine board included in this kit is an IO adapter for connecting
@@ -193,6 +203,8 @@ UART console.
 10. ATMEGA I2C Grove connector
 11. ATMEGA Arduino compatible socket
 12. ATMEGA Reset and Power LEDs
+
+***
 
 # Setting up the Sensors Mezzanine
 
