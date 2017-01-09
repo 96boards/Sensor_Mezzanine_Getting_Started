@@ -296,8 +296,7 @@ tools, the Python environment, and the Arduino toolchain. Then we'll install the
 UPM packages from source.
 
 ```shell
-$ sudo apt-get install arduino-mk arduino git build-essential autoconf libtool
-swig3.0 python-dev nodejs-dev cmake pkg-config libpcre3-dev
+$ sudo apt-get install arduino-mk arduino git build-essential autoconf libtool swig3.0 python-dev nodejs-dev cmake pkg-config libpcre3-dev
 $ sudo apt-get clean
 ```
 **Install MRAA library**
@@ -305,7 +304,7 @@ mraa is a development library that provides access to the kernel’s I2C, GPIO a
 interfaces.
 
 ```shell
-$ git clone https :// github . com / intel - iot - devkit / mraa
+$ git clone https://github.com/intel-iot-devkit/mraa
 $ cd mraa
 $ mkdir build
 $ cd build
@@ -322,7 +321,7 @@ Be patient when compiling UPM. The package takes about 23 minutes to build.
 
 ```shell
 $ sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
-$ git clone https :// github . com / intel - iot - devkit / upm
+$ git clone https://github.com/intel-iot-devkit/upm
 $ cd upm
 $ mkdir build
 $ cd build
