@@ -461,51 +461,68 @@ Connect the Groce RGB LCD to either of the I2C0 Grove connectors
 ## Step 2: Write the Software
 
 Save the following as rgb_lcd_demo.cpp in a working directory on your 96boards
-baseboard
+baseboard.  This below source is also in the rbb_lcd_demo directory in this repo.
 
 ```shell
 #include <string>
-#include "upm/jhd1313m1.h"
-#define I2C_BUS 0
+#include "upm/jhd1313m1.hpp"
+
+#define I2C_BUS  0
 #define RGB_WHT 0xff,0xff,0xff
 #define RGB_RED 0xff,0x00,0x00
 #define RGB_GRN 0x00,0xff,0x00
 #define RGB_BLU 0x00,0x00,0xff
 #define SLEEP_TIME 2
+
 using namespace std;
 upm::Jhd1313m1* lcd;
+
 void display(string str1, string str2, int red, int green, int blue)
 {
-    lcd->clear();
-    lcd->setColor(red, green, blue);
-    lcd->setCursor(0,0); /* first row */
-    lcd->write(str1);
-    lcd->setCursor(1,2); /* second row */
-    lcd->write(str2);
-    sleep(SLEEP_TIME);
+	lcd->clear();
+	lcd->setColor(red, green, blue);
+	lcd->setCursor(0,0); /* first row */
+	lcd->write(str1);
+	lcd->setCursor(1,2); /* second row */
+	lcd->write(str2);
+	sleep(SLEEP_TIME);
 }
+
 int main(int argc, char* argv[])
 {
-    string str1 = "96Boards!";
-    string str2 = "Grove Sensors!";
-    string str3 = "Linaro!";
+	string str1 = "96Boards!";
+	string str2 = "Grove Sensors!";
+	string str3 = "Linaro!";
+	
+	lcd = new upm::Jhd1313m1(I2C_BUS, 0x3e, 0x62);
 
-    lcd = new upm::Jhd1313m1(I2C_BUS, 0x3e, 0x62);
-    while (true) {
-        display(str1, "Red", RGB_RED);
-        display(str2, "Green", RGB_GRN);
-        display(str3, "Blue", RGB_BLU);
-    }
-    delete lcd;
-    return 0;
+	if ((argc >= 2) && (argv[1] != NULL))
+		str1 = argv[1];
+	if ((argc >= 3) && (argv[2] != NULL))
+		str2 = argv[2];
+	if ((argc >= 4) && (argv[3] != NULL))
+		str3 = argv[3];
+
+	while (true) {
+		display(str1, "Red", RGB_RED);
+		display(str2, "Green", RGB_GRN);
+		display(str3, "Blue", RGB_BLU);
+	}
+	delete lcd;
+	return 0;
 }
 ```
-## Step 3: Run the Demo
+## Step 3: Make the Demo
 
-Type the following from the same directory as you saved the sample code.
-
+Enter the following from the same directory the sample code is located.
 ```shell
 $ g++ rgb_lcd_demo.cpp -o rgb_lcd_demo -g -Wall -lupm-i2clcd
+```
+OR
+```shell
+$ make
+```
+## Steo 4: Run the demo
 $ ./rgb_lcd_demo
 ```
 
