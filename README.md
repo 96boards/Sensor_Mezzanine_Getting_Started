@@ -301,7 +301,11 @@ $ sudo apt-get clean
 ```
 **Install MRAA library**
 mraa is a development library that provides access to the kernel’s I2C, GPIO and SPI
-interfaces.
+interfaces.  It can be installed using apt-get or by native build.
+```shell
+$ sudo apt-get install libmraa-dev
+```
+OR
 
 ```shell
 $ git clone https://github.com/intel-iot-devkit/mraa
@@ -316,8 +320,12 @@ $ sudo ldconfig /usr/local/lib/
 
 **Install UPM library**
 UPM is an object oriented library of drivers for many Grove I2C devices, such as the Grove
-RGB backlight LCD module included in this kit.
-Be patient when compiling UPM. The package takes about 23 minutes to build.
+RGB backlight LCD module included in this kit. It can be installed using apt-get or by native build.
+
+```shell
+$ sudo apt-get install libupm-dev
+```
+OR
 
 ```shell
 $ sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
@@ -330,6 +338,7 @@ $ make
 $ sudo make install
 $ sudo ldconfig /usr/local/lib/libupm-*
 ```
+Be patient when compiling UPM. The package takes about 23 minutes to build.
 
 ## Step 7: Configure the software
 
