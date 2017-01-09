@@ -524,7 +524,9 @@ $ make
 ```
 
 ## Step 4: Run the demo
+```shell
 $ ./rgb_lcd_demo
+```
 
 The LCD will show some sample messages and the backlight will cycle between red, blue
 and green.
