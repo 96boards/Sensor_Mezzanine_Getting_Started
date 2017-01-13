@@ -603,17 +603,32 @@ int main(int argc, char* argv[])
     return response;
 }
 ```
-## Step 3: Run the Demo
+## Step 3: Build and Run the Demo
 
-Build and execute the program
+Build the program
 
 ```shell
-$ g++ test_touch_relay.cpp -o test_touch_relay -g -Wall -lmraa
+$ g++ touch_switch.cpp -o touch_switch -g -Wall -lmraa
+```
+OR
+```shell
+make
+```
+Run the demo
+```shell
 $ sudo ./test_touch_relay # Must be run as root to access GPIOs
 ```
-
 When the program is run, the relay will switch between on and off each time you tap the
 touch sensor with your finger.
+
+**Reminder:** Getting an error like this?
+```shell
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  Invalid GPIO pin specified
+Aborted
+```
+It's because you must be root to access the I/O!  Don't forget the `sudo` when executing the program!
+
 
 [Back to top](#table-of-contents)
 
