@@ -219,11 +219,11 @@ baseboard. You can find instructions for installing Debian in your baseboard’s
 
 Installing Debian on the CircuitCo or LeMaker HiKey:
 
- http://github.com/96boards/documentation/wiki/HiKeyGettingStarted#debian-linux-os
+http://www.96boards.org/documentation/ConsumerEdition/HiKey/Installation/README.md/
 
 Qualcomm Dragonboard 410C User Guide:
 
-https://github.com/96boards/documentation/blob/master/dragonboard410c/LinuxUserGuide_DragonBoard.pdf
+http://www.96boards.org/db410c-getting-started/Installation/LinuxSD.md/
 
 ## Step 2: Attach Sensors Adapter
 
@@ -403,8 +403,8 @@ shell by manipulating files in the /sys/class/gpio directory.
 
 ## Using ATMEGA IO
 
-The five blue 0.1” Arduino shield connectors P2-P6, and the 11 Grove connectors D3-D7, A0-
-A2, and AI2C are connected to the Atmel ATMEGA328P microcontroller. These connectors
+The five blue 0.1” Arduino shield connectors (P2-P6), and the 11 Grove connectors (D3-D7, A0-
+A2, and AI2C) are connected to the Atmel ATMEGA328P microcontroller. These connectors
 are not directly accessible from a Linux program. Instead, you can program the
 microcontroller with software to control the connectors and communicate with a Linux
 program via the serial port.
