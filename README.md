@@ -555,7 +555,7 @@ off.
 
 ## Step 2: Write the Code
 
-Save the following code as test_touch_relay.cpp:
+Save the following code also available in this repo as `./touch_switch/touch_switch.cpp`:
 
 ```shell
 #include <signal.h>
