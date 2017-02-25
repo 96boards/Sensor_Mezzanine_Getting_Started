@@ -850,7 +850,7 @@ This example also utilises an additional library to control the DHT component. Y
 to clone the following repository, then move the DHT files into your projects directory: 
 
 ```shell
-$ git clone https://github.com/SeeedStudio/Grove_Temperature_And_Humidity_Sensor.git
+$ git clone https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor.git
 $ cd Grove_Temperature_And_Humidity_Sensor/
 $ mv DHT.* ../
 $ cd ..
