@@ -227,7 +227,7 @@ http://www.96boards.org/db410c-getting-started/Installation/LinuxSD.md/
 
 ## Step 2: Attach Sensors Adapter
 
-**STOP:**  Before continuing, make sure to intall the mounting standoffs onto the sensor mezzanine as shown in the picture below:
+**STOP:**  Before continuing, make sure to intall the mounting standoffs included in the kit onto the sensor mezzanine as shown in the picture below:
 <img src="https://github.com/96boards/Sensor_Mezzanine_Getting_Started/blob/master/Images/Mounting.jpg" /> 
 
 Remove power and connect the sensors mezzanine to the baseboard. Use the 7mm
