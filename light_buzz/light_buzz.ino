@@ -1,5 +1,5 @@
 //pins used for components
-const int buzzer = 3;
+const int buzzer = 4;
 const int sensor = A0;
 
 //this is the threshold value for the light sensor
