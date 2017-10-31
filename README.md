@@ -402,7 +402,17 @@ controlling it from the microcontroller instead.
 
 Linux GPIOs can be directly controlled from a Linux program. The MRAA library provides
 functions for performing GPIO transactions. GPIOs can also be controlled directly from the
-shell by manipulating files in the /sys/class/gpio directory.
+shell by manipulating files in the `/sys/class/gpio` directory.
+
+```shell
+# How to turn on LED in pin 25 of Low Speed Expansion connector
+# Pin 25 of mezzanine correspond to pin 13 on board
+
+$ sudo echo 13 > /sys/class/gpio/export # turns on gpio pin
+$ sudo echo out > /sys/class/gpio/gpio13/direction # set gpio as out 
+$ sudo echo 1 > /sys/class/gpio/gpio13/value # sets to 1 which turns on LED
+$ sudo echo 0 > /sys/class/gpio/gpio13/value # sets to 0 which turns off LED
+```
 
 ## Using ATMEGA IO
 
@@ -723,7 +733,7 @@ Create a new directory and save this file as “Grove_light_buzz.ino”.
 
 ```shell
 //pins used for components
-const int buzzer = 3;
+const int buzzer = 4;
 const int sensor = A0;
 
 //this is the threshold value for the light sensor
