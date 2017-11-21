@@ -1,6 +1,7 @@
 //pins used for components
-const int buzzer = 3;
-const int sensor = A0;
+const int buzzer = 4;   // Arduino port pin PD4
+const int sensor = A0;  // Arduino analog ping ADC0
+
 
 //this is the threshold value for the light sensor
 //to make the light sensor more sensitive, lower this value
