@@ -219,11 +219,11 @@ baseboard. You can find instructions for installing Debian in your baseboard’s
 
 Installing Debian on the CircuitCo or LeMaker HiKey:
 
-http://www.96boards.org/documentation/ConsumerEdition/HiKey/Installation/README.md/
+https://www.96boards.org/documentation/ConsumerEdition/HiKey/Installation/
 
 Qualcomm Dragonboard 410C User Guide:
 
-http://www.96boards.org/db410c-getting-started/Installation/LinuxSD.md/
+https://www.96boards.org/documentation/ConsumerEdition/DragonBoard-410c/Installation/
 
 ## Step 2: Attach Sensors Adapter
 
@@ -241,9 +241,9 @@ may also damage your baseboard.
 ## Step 3 Get a command prompt
 
 **Option 1: Connect a monitor, keyboard and mouse**
-The 96Boards Debian images come with the LXDE desktop environment already installed. It
+The 96Boards Debian images come with a desktop environment available for download (such as LXQt). It
 can be used as a normal Linux desktop computer if you attach a keyboard, mouse and
-monitor. Use the “Terminal” application to get a command prompt.
+monitor. Use the “Terminal” application to get a command prompt. 
 
 **Option 2: Serial console**
 The sensors board has a USB to Serial interface for connecting to the baseboard's serial
@@ -257,13 +257,13 @@ Or on OSX:
 
 `$ screen /dev/tty.usbserial-08-15 115200`
 
-**Option 3: Secure Shell
-After connecting to the Internet (see below), you can get a command prompt with SSH:
+**Option 3: Secure Shell**
+After connecting to the network (see below), you can get a command prompt with SSH:
 ```shell
 $ ssh linaro@<ip-address-of-board>
-password: <your password>
+password: <password default is "linaro">
 ```
-## Step 4: Connect to the Internet
+## Step 4: Connect to the network
 
 The examples in this guide require additional software to be installed. The board needs to
 be connected to the Internet to download and install the required packages.
@@ -277,15 +277,13 @@ $ passwd linaro
 Enter new UNIX password: <enter new password>
 Retype new UNIX password: <retype new password>
 ```
-To connect to a wifi network, use the status bar Network icon in LXDE or the “nmtui”
-command from the console.
+To connect to a wifi network, use the status bar Network icon in the desktop or use the “nmtui” command from the console.
 
 `$ nmtui # Will give you a list of available wifi networks`
 
 ## Step 5: Update Debian
 
-Make sure all of the Debian packages are up to date before trying to install the packages
-required to use the Sensors Mezzanine.
+Make sure all of the Debian packages are up to date before installing the packages required to use the Sensors Mezzanine. From a terminal window execute the following:
 
 ```shell
 $ sudo apt-get update
@@ -299,13 +297,47 @@ tools, the Python environment, and the Arduino toolchain. Then we'll install the
 UPM packages from source.
 
 ```shell
-$ sudo apt-get install arduino-mk arduino git build-essential autoconf libtool swig3.0 python-dev nodejs-dev cmake pkg-config libpcre3-dev
+$ sudo apt-get install arduino-mk arduino git build-essential autoconf libtool swig3.0 python-dev cmake pkg-config libpcre3-dev
 $ sudo apt-get clean
 ```
+Now let's install node and npm
+```
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt-get install nodejs
+```
+check to make sure installed
+```
+$ node -v
+v8.9.1
+$ npm -v
+v5.5.1
+```
+
+## Install I/O Libaries
+Different 96boards can have different packages pre-installed if you are using a pre-built image from 96boards.org.   You can check to see if the I/O libaries are already installed. The three libraries are libmraa, libsoc, and libupm.
+
+```
+$ dpkg -l|grep libmraa
+ii  libmraa1                                      1.4.0-1linarostretch1                 arm64        userspace I/O library (runtime)
+$ dpkg -l|grep libsoc
+ii  libsoc2                                       0.8.2-1                               arm64        C library to interface with common peripherals (runtime)
+$ dpkg -l|grep libupm
+ii  libupm0                                       0.8.0-1linarostretch1                 arm64        Sensor/Actuator repository for MRAA (runtime)
+```
+
+If the libraries above are not installed, there is a [blog on the 96boards website](https://www.96boards.org/search/?q=libmraa&fields.label=96Boards) entitled "How do you install 96BoardGPIO, libsoc and libmraa on a new image?" that goes into more detail on how to install them, but the below instructions should work.  Also note there may be cases where it's required to update these libraries even if they are shown as being already installed.
+
+**Install SoC Library** 
+```shell
+$ sudo apt-get install libsoc-dev
+```
+
 **Install MRAA library**
 mraa is a development library that provides access to the kernel’s I2C, GPIO and SPI
 interfaces.  It can be installed using apt-get or by native build.
 ```shell
+# Note: install libsoc prior to libmraa
 $ sudo apt-get install libmraa-dev
 ```
 OR
@@ -326,6 +358,7 @@ UPM is an object oriented library of drivers for many Grove I2C devices, such as
 RGB backlight LCD module included in this kit. It can be installed using apt-get or by native build.
 
 ```shell
+# Note: install libmraa prior to libmupm
 $ sudo apt-get install libupm-dev
 ```
 OR
@@ -368,6 +401,7 @@ Now reboot the system to pick up all the changes
 ## Step 8: Fetch the sample code for projects in this guide
 
 `$ git clone https://github.com/96boards/Starter_Kit_for_96Boards`
+
 
 ***
 
@@ -441,6 +475,8 @@ $ cp /usr/share/arduino/examples/01.Basics/Blink/Blink.ino .
 $ ln -s /usr/share/arduino/Arduino.mk Makefile
 $ make upload reset_stty # The reset_stty target releases reset
 ```
+Once you execute the above command sequence you should see the led on the sensor mezzanine blinking on and off in 1 second intervals. You can now edit `Blink.ino` with your text editor of choice and modify the delay(1000) command, change it to delay(500) for example, rerun the `make upload reset_stty` command, and the led should blink twice as fast.  If this is working, you are now ready to go through the excercises!
+
 You can also use the “make monitor” command to connect the terminal to the serial port
 which will also release the ATMEGA from reset. The serial connection can be used as an IO
 channel between Linux and sketches running on the ATMEGA.
@@ -464,9 +500,9 @@ Connect the Groce RGB LCD to either of the I2C0 Grove connectors
 ## Step 2: Write the Software
 
 Save the following as rgb_lcd_demo.cpp in a working directory on your 96boards
-baseboard.  This below source is also in the rbb_lcd_demo directory in this repo.
+baseboard.  This below source is also in the rgb_lcd_demo directory in this repo.
 
-```shell
+```shelldpk
 #include <string>
 #include "upm/jhd1313m1.hpp"
 
@@ -619,7 +655,7 @@ make
 ```
 Run the demo
 ```shell
-$ sudo ./test_touch_relay # Must be run as root to access GPIOs
+$ sudo ./touch_relay # Must be run as root to access GPIOs
 ```
 When the program is run, the relay will switch between on and off each time you tap the
 touch sensor with your finger.
@@ -723,8 +759,8 @@ Create a new directory and save this file as “Grove_light_buzz.ino”.
 
 ```shell
 //pins used for components
-const int buzzer = 3;
-const int sensor = A0;
+const int buzzer = 4;   // Arduino port pin PD4
+const int sensor = A0;  // Arduino analog ping ADC0
 
 //this is the threshold value for the light sensor
 //to make the light sensor more sensitive, lower this value
@@ -863,9 +899,28 @@ $ cd ..
 
 To run the program, type in the terminal:
 
-`$ make run`
+```shell
+$ PYTHONPATH=$PYTHONPATH:/usr/lib/aarch64-linux-gnu/python2.7/site-packages
+$ make run
+```
 
 And to exit, use Ctrl + C
+
+** Potential build errors / work-arounds** 
+1)  Build Error: 
+ImportError: No module named pyupm_i2clcd
+               Makefile:3: recipe for target 'run' failed
+               
+Fix: Need to add path to PYTHONPATH
+	`PYTHONPATH=$PYTHONPATH:/usr/lib/aarch64-linux-gnu/python2.7/site-packages`
+	
+2) Build Error
+File "/usr/lib/aarch64-linux-gnu/python2.7/site-packages/pyupm_i2clcd.py", line 985
+SyntaxError: Non-ASCII character '\xc3' in file /usr/lib/aarch64-linux-gnu/python2.7/site-packages/pyupm_i2clcd.py on line 986, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Makefile:3: recipe for target 'run' failed
+
+Fix: Add `# coding=utf-8` to first line of /usr/lib/aarch64-linux-gnu/python2.7/site-packages/pyupm_i2clcd.py and save
+
 
 [Back to top](#table-of-contents)
 
