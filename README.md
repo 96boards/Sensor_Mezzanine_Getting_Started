@@ -292,8 +292,7 @@ Do you want to continue? [Y/n] y
 ```
 ## Step 6: Install extra tool packages
 
-To run these demos, we’ll install the Debian packages for the standard Linux development
-tools, the Python environment, and the Arduino toolchain. Then we'll install the MRAA and
+To run these demos, we’ll install the Debian packages for the standard Linux development tools, the Python environment, and the Arduino toolchain. Then we'll install the MRAA and
 UPM packages from source.
 
 ```shell
@@ -315,66 +314,18 @@ v5.5.1
 ```
 
 ## Install I/O Libaries
-Different 96boards can have different packages pre-installed if you are using a pre-built image from 96boards.org.   You can check to see if the I/O libaries are already installed. The three libraries are libmraa, libsoc, and libupm.
+For the purposes of these sample excercises, the user needs to install the following packages to build from source:
 
-```
-$ dpkg -l|grep libmraa
-ii  libmraa1                                      1.4.0-1linarostretch1                 arm64        userspace I/O library (runtime)
-$ dpkg -l|grep libsoc
-ii  libsoc2                                       0.8.2-1                               arm64        C library to interface with common peripherals (runtime)
-$ dpkg -l|grep libupm
-ii  libupm0                                       0.8.0-1linarostretch1                 arm64        Sensor/Actuator repository for MRAA (runtime)
-```
-
-If the libraries above are not installed, there is a [blog on the 96boards website](https://www.96boards.org/search/?q=libmraa&fields.label=96Boards) entitled "How do you install 96BoardGPIO, libsoc and libmraa on a new image?" that goes into more detail on how to install them, but the below instructions should work.  Also note there may be cases where it's required to update these libraries even if they are shown as being already installed.
-
-**Install SoC Library** 
-```shell
+```shell 
 $ sudo apt-get install libsoc-dev
-```
-
-**Install MRAA library**
-mraa is a development library that provides access to the kernel’s I2C, GPIO and SPI
-interfaces.  It can be installed using apt-get or by native build.
-```shell
 # Note: install libsoc prior to libmraa
 $ sudo apt-get install libmraa-dev
-```
-OR
-
-```shell
-$ git clone https://github.com/intel-iot-devkit/mraa
-$ cd mraa
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
-$ sudo make install
-$ sudo ldconfig /usr/local/lib/
-```
-
-**Install UPM library**
-UPM is an object oriented library of drivers for many Grove I2C devices, such as the Grove
-RGB backlight LCD module included in this kit. It can be installed using apt-get or by native build.
-
-```shell
 # Note: install libmraa prior to libmupm
 $ sudo apt-get install libupm-dev
-```
-OR
+``` 
 
-```shell
-$ sudo ln -s /usr/bin/swig3.0 /usr/bin/swig
-$ git clone https://github.com/intel-iot-devkit/upm
-$ cd upm
-$ mkdir build
-$ cd build
-$ cmake -DBUILDSWIGNODE=OFF ..
-$ make
-$ sudo make install
-$ sudo ldconfig /usr/local/lib/libupm-*
-```
-Be patient when compiling UPM. The package takes about 23 minutes to build.
+There is a [blog on the 96boards website](https://www.96boards.org/search/?q=libmraa&fields.label=96Boards) entitled "How do you install 96BoardGPIO, libsoc and libmraa on a new image?" that goes into more detail on how to install them, but the below instructions should work.  Also note there may be cases where it's required to update these libraries even if they are shown as being already installed.
+
 
 ## Step 7: Configure the software
 
